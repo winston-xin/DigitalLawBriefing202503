@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="数字政策与法规简报 - 2025年第3期，辽宁省律师协会数字法治与数字经济专业委员会发布">
+    <meta name="keywords" content="数字政策,法规简报,人工智能,数字经济,政策解读">
+    <meta name="author" content="辽宁省律师协会数字法治与数字经济专业委员会">
+    <title>数字政策与法规简报 - 2025年第3期</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Microsoft YaHei", "SimSun", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        
+        .date {
+            font-size: 16px;
+            opacity: 0.8;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+        }
+        
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .category {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .category-icon {
+            font-size: 28px;
+            margin-right: 15px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: white;
+        }
+        
+        .ai { background: linear-gradient(135deg, #667eea, #764ba2); }
+        .transformation { background: linear-gradient(135deg, #f093fb, #f5576c); }
+        .data { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+        .education { background: linear-gradient(135deg, #fa709a, #fee140); }
+        .government { background: linear-gradient(135deg, #30cfd0, #330867); }
+        .financial { background: linear-gradient(135deg, #a8edea, #fed6e3); }
+        .regulation { background: linear-gradient(135deg, #ff9a9e, #fecfef); }
+        .trade { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+        
+        .category-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            flex: 1;
+        }
+        
+        .category-count {
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .file-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .file-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .file-item:hover {
+            background: #e9ecef;
+            border-left-color: #667eea;
+            transform: translateX(5px);
+        }
+        
+        .file-icon {
+            font-size: 16px;
+            margin-right: 12px;
+            color: #667eea;
+        }
+        
+        .file-name {
+            flex: 1;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .file-date {
+            font-size: 12px;
+            color: #666;
+            background: rgba(102, 126, 234, 0.1);
+            padding: 4px 8px;
+            border-radius: 12px;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            margin-top: 40px;
+        }
+        
+        .search-box {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .search-input {
+            width: 100%;
+            max-width: 500px;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            background: white;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .all-files-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+        
+        .all-files-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .multi-file-item {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .multi-file-item:hover {
+            background: #e9ecef;
+            border-left-color: #667eea;
+            transform: translateX(5px);
+        }
+        
+        .file-title {
+            font-weight: bold;
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .file-title .main-icon {
+            font-size: 16px;
+            margin-right: 8px;
+            color: #667eea;
+        }
+        
+        .sub-files {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding-left: 24px;
+        }
+        
+        .sub-file {
+            display: flex;
+            align-items: center;
+            padding: 6px 10px;
+            background: white;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #555;
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+        
+        .sub-file:hover {
+            background: #667eea;
+            color: white;
+            transform: translateX(3px);
+        }
+        
+        .sub-file-icon {
+            font-size: 12px;
+            margin-right: 6px;
+        }
+        
+        @media (max-width: 768px) {
+            .categories {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            .stats {
+                gap: 15px;
+            }
+            
+            .all-files-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏛️ 数字政策与法规简报</h1>
+            <div class="subtitle">2025年第3期 · 人工智能+行动计划与标准体系建设</div>
+            <div class="date">发布日期：2025年9月</div>
+            <div class="stats">
+                <div class="stat-item">📄 政策文件：23个</div>
+                <div class="stat-item">🤖 人工智能+：2个</div>
+                <div class="stat-item">🏭 产业转型：4个</div>
+                <div class="stat-item">📊 发布部门：15+个</div>
+            </div>
+        </header>
+
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="🔍 搜索政策文件..." id="searchInput">
+            <button id="clearSearch" style="margin-left: 10px; padding: 15px 20px; border: none; border-radius: 30px; background: rgba(255, 255, 255, 0.9); color: #667eea; cursor: pointer; font-size: 14px; transition: all 0.3s ease; display: none;">清空</button>
+        </div>
+
+        <div class="categories">
+            <!-- 人工智能+行动 -->
+            <div class="category">
+                <div class="category-header">
+                    <div class="category-icon ai">🤖</div>
+                    <div class="category-title">人工智能+行动计划</div>
+                    <div class="category-count">3个文件</div>
+                </div>
+                <div class="file-list">
+                    <a href="ai-national-action.html" class="file-item">
+                        <span class="file-icon">📋</span>
+                        <span class="file-name">国务院关于深入实施"人工智能+"行动的意见</span>
+                        <span class="file-date">07月</span>
+                    </a>
+                    <a href="ai-transport-implementation.html" class="file-item">
+                        <span class="file-icon">🚗</span>
+                        <span class="file-name">关于"人工智能+交通运输"的实施意见</span>
+                        <span class="file-date">07月</span>
+                    </a>
+                    <a href="ai-energy-implementation.html" class="file-item">
+                        <span class="file-icon">⚡</span>
+                        <span class="file-name">推进"人工智能+"能源高质量发展的实施意见</span>
+                        <span class="file-date">07月</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 数字化转型 -->
+            <div class="category">
+                <div class="category-header">
+                    <div class="category-icon transformation">🔄</div>
+                    <div class="category-title">产业数字化转型</div>
+                    <div class="category-count">4个文件</div>
+                </div>
+                <div class="file-list">
+                    <div class="multi-file-item">
+                        <div class="file-title">
+                            <span class="main-icon">🏭</span>
+                            <span>机械工业数字化转型实施方案</span>
+                            <span class="file-date" style="margin-left: auto;">07月</span>
+                        </div>
+                        <div class="sub-files">
+                            <a href="工业和信息化部等八部门关于印发《机械工业数字化转型实施方案》的通知-html-20251207.html" class="sub-file">
+                                <span class="sub-file-icon">📄</span>
+                                <span>发布通知</span>
+                            </a>
+                            <a href="机械工业数字化转型实施方案-html-20251207.html" class="sub-file">
+                                <span class="sub-file-icon">📄</span>
+                                <span>实施方案（HTML版）</span>
+                            </a>
+                            <a href="机械工业数字化转型实施方案.pdf" class="sub-file">
+                                <span class="sub-file-icon">📄</span>
+                                <span>实施方案（PDF版）</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="multi-file-item">
+                        <div class="file-title">
+                            <span class="main-icon">🌱</span>
+                            <span>关于加强数字经济创新型企业培育的若干措施</span>
+                            <span class="file-date" style="margin-left: auto;">07月</span>
+                        </div>
+                        <div class="sub-files">
+                            <a href="关于加强数字经济创新型企业培育的若干措施-html-20251208.html" class="sub-file">
+                                <span class="sub-file-icon">📄</span>
+                                <span>培育措施正文（HTML版）</span>
+                            </a>
+                            <a href="国家发展改革委等部门关于印发《关于加强数字经济创新型企业培育的若干措施》的通知-html-20251208.html" class="sub-file">
+                                <span class="sub-file-icon">📋</span>
+                                <span>发布通知（HTML版）</span>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="市场监管总局等部门关于加快推进质量认证数字化发展的指导意见-html-20251207.html" class="file-item">
+                        <span class="file-icon">✅</span>
+                        <span class="file-name">加快推进质量认证数字化发展指导意见</span>
+                        <span class="file-date">07月</span>
+                    </a>
+                    <a href="教育部办公厅关于组织实施数字化赋能教师发展行动的通知-html-20251207.html" class="file-item">
+                        <span class="file-icon">🎓</span>
+                        <span class="file-name">数字化赋能教师发展行动通知</span>
+                        <span class="file-date">07月</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 数据安全与标准 -->
+            <div class="category">
+                <div class="category-header">
+                    <div class="category-icon data">🔐</div>
+                    <div class="category-title">数据安全与标准体系</div>
+                    <div class="category-count">3个文件</div>
+                </div>
+                <div class="file-list">
+                    <a href="1.《数据安全国家标准体系（2025版）》.pdf" class="file-item">
+                        <span class="file-icon">📚</span>
+                        <span class="file-name">数据安全国家标准体系（2025版）</span>
+                        <span class="file-date">07月</span>
+                    </a>
+                    <a href="2.《个人信息保护国家标准体系（2025版）》.pdf" class="file-item">
+                        <span class="file-icon">🔒</span>
+                        <span class="file-name">个人信息保护国家标准体系（2025版）</span>
+                        <span class="file-date">07月</span>
+                    </a>
+                    <div class="multi-file-item">
+                        <div class="file-title">
+                            <span class="main-icon">☁️</span>
+                            <span>云计算综合标准化体系建设指南（2025版）</span>
+                            <span class="file-date" style="margin-left: auto;">07月</span>
+                        </div>
+                        <div class="sub-files">
+                            <a href="工业和信息化部_国家标准化管理委员会关于印发《云计算综合标准化体系建设指南（2025版）》的通知-html-20251208.html" class="sub-file">
+                                <span class="sub-file-icon">📄</span>
+                                <span>发布通知</span>
+                            </a>
+                            <a href="云计算综合标准化体系建设指南（2025版）-html-20251208.html" class="sub-file">
+                                <span class="sub-file-icon">📄</span>
+                                <span>建设指南（HTML版）</span>
+                            </a>
+                            <a href="《云计算综合标准化体系建设指南（2025版）》.pdf" class="sub-file">
+                                <span class="sub-file-icon">📄</span>
+                                <span>建设指南（PDF版）</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 财经金融政策 -->
+            <div class="category">
+                <div class="category-header">
+                    <div class="category-icon financial">💰</div>
+                    <div class="category-title">财经金融政策</div>
+                    <div class="category-count">3个文件</div>
+                </div>
+                <div class="file-list">
+                    <a href="关于联合开展《小微企业增信会计数据标准（试行版）》深化试点工作的通知-html-20251208.html" class="file-item">
+                        <span class="file-icon">🏢</span>
+                        <span class="file-name">小微企业增信会计数据标准深化试点</span>
+                        <span class="file-date">07月</span>
+                    </a>
+                    <a href="期货公司互联网营销管理暂行规定-html-20251207.html" class="file-item">
+                        <span class="file-icon">📈</span>
+                        <span class="file-name">期货公司互联网营销管理暂行规定</span>
+                        <span class="file-date">07月</span>
+                    </a>
+                    <div class="multi-file-item">
+                        <div class="file-title">
+                            <span class="main-icon">🏛️</span>
+                            <span>规范互联网平台企业涉税信息报送处罚公告</span>
+                            <span class="file-date" style="margin-left: auto;">07月</span>
+                        </div>
+                        <div class="sub-files">
+                            <a href="国家税务总局_工业和信息化部_国家互联网信息办公室关于规范互联网平台企业涉税信息报送有关行政处罚事项的公告-html-20251207.html" class="sub-file">
+                                <span class="sub-file-icon">📄</span>
+                                <span>处罚公告（HTML版）</span>
+                            </a>
+                            <a href="国家税务总局 工业和信息化部 国家互联网信息办公室关于规范互联网平台企业涉税信息报送有关行政处罚事项的公告.doc" class="sub-file">
+                                <span class="sub-file-icon">📄</span>
+                                <span>处罚公告（DOC版）</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 贸易与消费 -->
+            <div class="category">
+                <div class="category-header">
+                    <div class="category-icon trade">🌍</div>
+                    <div class="category-title">贸易与消费政策</div>
+                    <div class="category-count">2个文件</div>
+                </div>
+                <div class="file-list">
+                    <a href="商务部等5部门关于印发《支持北京市率先试行世贸组织〈电子商务协定〉工作方案》的通知-html-20251208.html" class="file-item">
+                        <span class="file-icon">🤝</span>
+                        <span class="file-name">支持北京试行WTO电子商务协定方案</span>
+                        <span class="file-date">07月</span>
+                    </a>
+                    <a href="商务部等8部门关于大力发展数字消费共创数字时代美好生活的指导意见-html-20251208.html" class="file-item">
+                        <span class="file-icon">🛍️</span>
+                        <span class="file-name">大力发展数字消费指导意见</span>
+                        <span class="file-date">08月</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 司法与监管 -->
+            <div class="category">
+                <div class="category-header">
+                    <div class="category-icon regulation">⚖️</div>
+                    <div class="category-title">司法与监管</div>
+                    <div class="category-count">4个文件</div>
+                </div>
+                <div class="file-list">
+                    <div class="multi-file-item">
+                        <div class="file-title">
+                            <span class="main-icon">⚖️</span>
+                            <span>最高人民法院关于互联网法院案件管辖的规定</span>
+                            <span class="file-date" style="margin-left: auto;">06月</span>
+                        </div>
+                        <div class="sub-files">
+                            <a href="最高人民法院关于互联网法院案件管辖的规定-html-20251206.html" class="sub-file">
+                                <span class="sub-file-icon">📄</span>
+                                <span>案件管辖规定（HTML版）</span>
+                            </a>
+                            <a href="最高人民法院关于互联网法院案件管辖的规定_20250929.docx" class="sub-file">
+                                <span class="sub-file-icon">📄</span>
+                                <span>案件管辖规定（DOCX版）</span>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="中国国际经济贸易仲裁委员会关于在仲裁中使用人工智能技术的指引（试行）-html-20251208.html" class="file-item">
+                        <span class="file-icon">⚖️</span>
+                        <span class="file-name">仲裁中使用人工智能技术的指引（试行）</span>
+                        <span class="file-date">07月</span>
+                    </a>
+                    <a href="国家卫生健康委、市场监管总局关于实施预包装食品数字标签有关事项的公告-html-20251208.html" class="file-item">
+                        <span class="file-icon">🏷️</span>
+                        <span class="file-name">预包装食品数字标签实施公告</span>
+                        <span class="file-date">07月</span>
+                    </a>
+                    <a href="关于开展个人信息保护负责人信息报送工作的公告-html-20251208.html" class="file-item">
+                        <span class="file-icon">📋</span>
+                        <span class="file-name">个人信息保护负责人信息报送公告</span>
+                        <span class="file-date">07月</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 人工智能治理 -->
+            <div class="category">
+                <div class="category-header">
+                    <div class="category-icon ai">🤖</div>
+                    <div class="category-title">人工智能治理</div>
+                    <div class="category-count">2个文件</div>
+                </div>
+                <div class="file-list">
+                    <a href="《人工智能安全治理框架》2.0版.pdf" class="file-item">
+                        <span class="file-icon">🛡️</span>
+                        <span class="file-name">人工智能安全治理框架2.0版</span>
+                        <span class="file-date">07月</span>
+                    </a>
+                    <a href="附件：人工智能在生物制造领域典型应用案例（第一批）.pdf" class="file-item">
+                        <span class="file-icon">🧬</span>
+                        <span class="file-name">人工智能在生物制造领域典型应用案例</span>
+                        <span class="file-date">07月</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 数据要素应用 -->
+            <div class="category">
+                <div class="category-header">
+                    <div class="category-icon data">📊</div>
+                    <div class="category-title">数据要素应用</div>
+                    <div class="category-count">1个文件</div>
+                </div>
+                <div class="file-list">
+                    <a href="data-elements-guide.html" class="file-item">
+                        <span class="file-icon">🏗️</span>
+                        <span class="file-name">九个领域"数据要素×"典型场景指引</span>
+                        <span class="file-date">07月</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 人才培养 -->
+            <div class="category">
+                <div class="category-header">
+                    <div class="category-icon education">👥</div>
+                    <div class="category-title">人才培养</div>
+                    <div class="category-count">1个文件</div>
+                </div>
+                <div class="file-list">
+                    <a href="人力资源社会保障部办公厅关于广泛开展专业技术人才人工智能通识继续教育的通知_中华人民共和国人力资源和社会保障部-html-20251208.html" class="file-item">
+                        <span class="file-icon">👥</span>
+                        <span class="file-name">专业技术人才人工智能通识继续教育通知</span>
+                        <span class="file-date">07月</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 全部文件列表 -->
+        <div class="all-files-section">
+            <h2 style="text-align: center; color: #333; margin-bottom: 20px;">📚 全部文件列表</h2>
+            <div class="all-files-grid" id="allFilesGrid">
+                <!-- 通过JavaScript动态生成 -->
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 辽宁省律师协会数字法治与数字经济专业委员会</p>
+            <p>技术支持：数字普法工作小组</p>
+        </footer>
+    </div>
+
+    <script>
+        // 所有文件数据
+        const allFiles = [
+            { name: "国务院关于深入实施'人工智能+'行动的意见", file: "ai-national-action.html", date: "07月", category: "人工智能+行动计划" },
+            { name: "关于'人工智能+交通运输'的实施意见", file: "ai-transport-implementation.html", date: "07月", category: "人工智能+行动计划" },
+            { name: "推进'人工智能+'能源高质量发展的实施意见", file: "ai-energy-implementation.html", date: "07月", category: "人工智能+行动计划" },
+            { name: "人工智能在生物制造领域典型应用案例", file: "附件：人工智能在生物制造领域典型应用案例（第一批）.pdf", date: "07月", category: "人工智能治理" },
+            { name: "人工智能安全治理框架2.0版", file: "《人工智能安全治理框架》2.0版.pdf", date: "07月", category: "人工智能治理" },
+            { name: "机械工业数字化转型实施方案", file: "工业和信息化部等八部门关于印发《机械工业数字化转型实施方案》的通知-html-20251207.html", date: "07月", category: "产业数字化转型" },
+            { name: "机械工业数字化转型实施方案（详细版）", file: "机械工业数字化转型实施方案-html-20251207.html", date: "07月", category: "产业数字化转型" },
+            { name: "机械工业数字化转型实施方案（PDF版）", file: "机械工业数字化转型实施方案.pdf", date: "07月", category: "产业数字化转型" },
+            { name: "关于加强数字经济创新型企业培育的若干措施", file: "关于加强数字经济创新型企业培育的若干措施-html-20251208.html", date: "07月", category: "产业数字化转型" },
+            { name: "数字经济创新型企业培育发布通知", file: "国家发展改革委等部门关于印发《关于加强数字经济创新型企业培育的若干措施》的通知-html-20251208.html", date: "07月", category: "产业数字化转型" },
+            { name: "加快推进质量认证数字化发展指导意见", file: "市场监管总局等部门关于加快推进质量认证数字化发展的指导意见-html-20251207.html", date: "07月", category: "产业数字化转型" },
+            { name: "数字化赋能教师发展行动通知", file: "教育部办公厅关于组织实施数字化赋能教师发展行动的通知-html-20251207.html", date: "07月", category: "产业数字化转型" },
+            { name: "数据安全国家标准体系（2025版）", file: "1.《数据安全国家标准体系（2025版）》.pdf", date: "07月", category: "数据安全与标准体系" },
+            { name: "个人信息保护国家标准体系（2025版）", file: "2.《个人信息保护国家标准体系（2025版）》.pdf", date: "07月", category: "数据安全与标准体系" },
+            { name: "云计算综合标准化体系建设指南", file: "《云计算综合标准化体系建设指南（2025版）》.pdf", date: "07月", category: "数据安全与标准体系" },
+            { name: "云计算综合标准化体系建设指南（HTML版）", file: "云计算综合标准化体系建设指南（2025版）-html-20251208.html", date: "07月", category: "数据安全与标准体系" },
+            { name: "云计算综合标准化体系建设指南通知", file: "工业和信息化部_国家标准化管理委员会关于印发《云计算综合标准化体系建设指南（2025版）》的通知-html-20251208.html", date: "07月", category: "数据安全与标准体系" },
+            { name: "小微企业增信会计数据标准深化试点", file: "关于联合开展《小微企业增信会计数据标准（试行版）》深化试点工作的通知-html-20251208.html", date: "07月", category: "财经金融政策" },
+            { name: "期货公司互联网营销管理暂行规定", file: "期货公司互联网营销管理暂行规定-html-20251207.html", date: "07月", category: "财经金融政策" },
+            { name: "互联网平台企业涉税信息报送处罚公告", file: "国家税务总局_工业和信息化部_国家互联网信息办公室关于规范互联网平台企业涉税信息报送有关行政处罚事项的公告-html-20251207.html", date: "07月", category: "财经金融政策" },
+            { name: "支持北京试行WTO电子商务协定方案", file: "商务部等5部门关于印发《支持北京市率先试行世贸组织〈电子商务协定〉工作方案》的通知-html-20251208.html", date: "07月", category: "贸易与消费政策" },
+            { name: "商务部等8部门关于大力发展数字消费共创数字时代美好生活的指导意见", file: "商务部等8部门关于大力发展数字消费共创数字时代美好生活的指导意见-html-20251208.html", date: "08月", category: "贸易与消费政策" },
+            { name: "最高人民法院关于互联网法院案件管辖规定", file: "最高人民法院关于互联网法院案件管辖的规定-html-20251206.html", date: "06月", category: "司法与监管" },
+            { name: "仲裁中使用人工智能技术的指引（试行）", file: "中国国际经济贸易仲裁委员会关于在仲裁中使用人工智能技术的指引（试行）-html-20251208.html", date: "07月", category: "司法与监管" },
+            { name: "预包装食品数字标签实施公告", file: "国家卫生健康委、市场监管总局关于实施预包装食品数字标签有关事项的公告-html-20251208.html", date: "07月", category: "司法与监管" },
+            { name: "个人信息保护负责人信息报送公告", file: "关于开展个人信息保护负责人信息报送工作的公告-html-20251208.html", date: "07月", category: "司法与监管" },
+            { name: "九个领域'数据要素×'典型场景指引", file: "data-elements-guide.html", date: "07月", category: "数据要素应用" },
+            { name: "专业技术人才人工智能通识继续教育通知", file: "人力资源社会保障部办公厅关于广泛开展专业技术人才人工智能通识继续教育的通知_中华人民共和国人力资源和社会保障部-html-20251208.html", date: "07月", category: "人才培养" }
+        ];
+
+        // 生成全部文件网格
+        function generateAllFilesGrid(files = allFiles) {
+            const grid = document.getElementById('allFilesGrid');
+            if (files.length === 0) {
+                grid.innerHTML = '<div style="text-align: center; padding: 40px; color: #666; grid-column: 1 / -1;">没有找到匹配的政策文件</div>';
+                return;
+            }
+            grid.innerHTML = files.map(file => `
+                <a href="${file.file}" class="file-item" style="border-left-color: #667eea; display: flex; align-items: center; padding: 12px 15px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: #333; transition: all 0.3s ease;">
+                    <span class="file-icon" style="font-size: 16px; margin-right: 12px; color: #667eea;">📄</span>
+                    <div style="flex: 1;">
+                        <div class="file-name" style="font-size: 14px; line-height: 1.4;">${file.name}</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 4px;">${file.category}</div>
+                    </div>
+                    <span class="file-date" style="font-size: 12px; color: #666; background: rgba(102, 126, 234, 0.1); padding: 4px 8px; border-radius: 12px;">${file.date}</span>
+                </a>
+            `).join('');
+        }
+
+        // 搜索功能
+        const searchInput = document.getElementById('searchInput');
+        const clearButton = document.getElementById('clearSearch');
+        
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            // 显示或隐藏清空按钮
+            if (searchTerm) {
+                clearButton.style.display = 'inline-block';
+            } else {
+                clearButton.style.display = 'none';
+            }
+            
+            // 搜索全部文件网格
+            const filteredFiles = allFiles.filter(file => 
+                file.name.toLowerCase().includes(searchTerm) ||
+                file.category.toLowerCase().includes(searchTerm)
+            );
+            generateAllFilesGrid(filteredFiles);
+            
+            // 搜索分类明细目录中的文件项
+            const categories = document.querySelectorAll('.category');
+            categories.forEach(category => {
+                const fileItems = category.querySelectorAll('.file-item, .multi-file-item');
+                let hasVisibleItems = false;
+                let visibleCount = 0;
+                
+                // 保存原始文件数量
+                const categoryCount = category.querySelector('.category-count');
+                if (!categoryCount.dataset.originalCount) {
+                    categoryCount.dataset.originalCount = categoryCount.textContent;
+                }
+                
+                fileItems.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    if (text.includes(searchTerm)) {
+                        item.style.display = '';
+                        hasVisibleItems = true;
+                        visibleCount++;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // 更新分类文件数量
+                if (searchTerm) {
+                    categoryCount.textContent = `${visibleCount}个文件`;
+                } else {
+                    categoryCount.textContent = categoryCount.dataset.originalCount;
+                }
+                
+                // 如果分类中有匹配的文件，显示该分类；否则隐藏
+                category.style.display = hasVisibleItems ? '' : 'none';
+            });
+        });
+        
+        // 清空搜索功能
+        clearButton.addEventListener('click', function() {
+            searchInput.value = '';
+            clearButton.style.display = 'none';
+            generateAllFilesGrid(allFiles);
+            
+            // 恢复所有分类和文件项的显示
+            const categories = document.querySelectorAll('.category');
+            categories.forEach(category => {
+                category.style.display = '';
+                
+                // 恢复原始文件数量
+                const categoryCount = category.querySelector('.category-count');
+                if (categoryCount.dataset.originalCount) {
+                    categoryCount.textContent = categoryCount.dataset.originalCount;
+                }
+                
+                const fileItems = category.querySelectorAll('.file-item, .multi-file-item');
+                fileItems.forEach(item => {
+                    item.style.display = '';
+                });
+            });
+            
+            searchInput.focus();
+        });
+        
+        // 初始化
+        generateAllFilesGrid();
+
+        // 添加页面加载动画
+        document.addEventListener('DOMContentLoaded', function() {
+            const categories = document.querySelectorAll('.category');
+            categories.forEach((category, index) => {
+                category.style.opacity = '0';
+                category.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    category.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    category.style.opacity = '1';
+                    category.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
