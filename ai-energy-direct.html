@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国家发展改革委 国家能源局关于推进“人工智能+”能源高质量发展的实施意见</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Microsoft YaHei", "SimHei", "STHeiti", sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #f5576c);
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .doc-number {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #667eea;
+            font-weight: 600;
+            background: rgba(102, 126, 234, 0.1);
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        
+        .recipients {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: left;
+            line-height: 1.8;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .content-wrapper {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+            margin-left: 320px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .toc {
+                position: relative;
+                left: auto;
+                top: auto;
+                width: 100%;
+                height: auto;
+                margin-bottom: 30px;
+            }
+            
+            .content-wrapper {
+                margin-left: 0;
+            }
+        }
+        
+        .section-title {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 15px 25px;
+            border-radius: 12px;
+            margin-top: 40px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            background: linear-gradient(180deg, #f093fb, #f5576c);
+        }
+        
+        .subsection-title {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-left: 4px solid #667eea;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .subsection-title:hover {
+            transform: translateX(5px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content {
+            font-size: 16px;
+            text-indent: 2em;
+            margin-bottom: 25px;
+            text-align: justify;
+            line-height: 1.8;
+            color: #34495e;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 18px 22px;
+            border-radius: 8px;
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .content:hover {
+            background: rgba(255, 255, 255, 0.8);
+            border-left-color: #667eea;
+            transform: translateX(3px);
+        }
+        
+        .content-no-indent {
+            font-size: 16px;
+            margin-bottom: 25px;
+            text-align: justify;
+            line-height: 1.8;
+            color: #34495e;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 18px 22px;
+            border-radius: 8px;
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .content-no-indent:hover {
+            background: rgba(255, 255, 255, 0.8);
+            border-left-color: #667eea;
+            transform: translateX(3px);
+        }
+        
+        .column-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            padding: 15px 22px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .column-content {
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-align: justify;
+            padding: 20px 25px;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            border-left: 4px solid #667eea;
+            line-height: 1.8;
+            color: #34495e;
+            transition: all 0.3s ease;
+        }
+        
+        .column-content:hover {
+            background: rgba(102, 126, 234, 0.1);
+            transform: translateX(3px);
+            box-shadow: 0 3px 10px rgba(102, 126, 234, 0.1);
+        }
+        
+        .signature {
+            text-align: right;
+            margin-top: 50px;
+            font-size: 18px;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 10px;
+            display: inline-block;
+            margin-left: auto;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            font-weight: 600;
+        }
+        
+        .date {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 18px;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: white;
+            border-radius: 10px;
+            display: inline-block;
+            margin-left: auto;
+            box-shadow: 0 5px 15px rgba(240, 147, 251, 0.3);
+            font-weight: 600;
+        }
+        
+        /* 目录导航 */
+        .toc {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            width: 280px;
+            height: calc(100vh - 40px);
+            overflow-y: auto;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        .toc-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .toc-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .toc-item {
+            padding: 12px 18px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 8px;
+            text-decoration: none;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .toc-item:hover, .toc-item.active {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        /* 返回顶部按钮 */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 1200px) {
+            .toc {
+                left: 10px;
+                width: 250px;
+            }
+            
+            .content-wrapper {
+                margin-left: 270px;
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .toc {
+                position: relative;
+                left: auto;
+                top: auto;
+                width: 100%;
+                height: auto;
+                margin-bottom: 30px;
+            }
+            
+            .content-wrapper {
+                margin-left: 0;
+            }
+            
+            .toc-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .content-wrapper {
+                padding: 25px;
+            }
+            
+            .toc-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        /* 文本选择样式 */
+        ::selection {
+            background: rgba(102, 126, 234, 0.3);
+            color: #2c3e50;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            body {
+                max-width: 900px;
+            }
+        }
+        
+        @media (max-width: 1024px) {
+            .toc {
+                position: relative;
+                width: 100%;
+                height: auto;
+                margin: 20px 0;
+            }
+            
+            .content-wrapper {
+                margin-left: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .header {
+                padding: 25px 20px;
+            }
+            
+            .header h1 {
+                font-size: 22px;
+            }
+            
+            .content-wrapper {
+                padding: 25px;
+            }
+            
+            .section-title {
+                font-size: 20px;
+                padding: 12px 20px;
+            }
+            
+            .subsection-title {
+                font-size: 18px;
+                padding: 10px 15px;
+            }
+            
+            .content, .content-no-indent, .column-content {
+                padding: 15px 20px;
+            }
+            
+            .toc-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 20px;
+            }
+            
+            .doc-number {
+                font-size: 16px;
+            }
+            
+            .content-wrapper {
+                padding: 20px;
+            }
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                max-width: 100%;
+            }
+            
+            .header {
+                background: white;
+                box-shadow: none;
+                padding: 20px;
+            }
+            
+            .content-wrapper {
+                background: white;
+                box-shadow: none;
+                padding: 20px;
+            }
+            
+            .toc, .back-to-top {
+                display: none;
+            }
+            
+            .section-title, .subsection-title, .content, .content-no-indent, .column-content {
+                background: transparent;
+                box-shadow: none;
+                border: none;
+            }
+            
+            .column-content {
+                border-left: 3px solid #667eea;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<button class="back-to-top" id="backToTop">↑</button>
+
+<div class="header">
+    <h1>国家发展改革委 国家能源局关于推进“人工智能+”能源高质量发展的实施意见</h1>
+    <div class="doc-number">国能发科技〔2025〕73号</div>
+</div>
+
+<div class="recipients">
+    各省、自治区、直辖市及计划单列市、新疆生产建设兵团发展改革委、能源局，有关中央企业，有关行业协会：
+</div>
+
+<!-- 目录导航 -->
+<div class="toc">
+    <div class="toc-title">📋 目录导航</div>
+    <div class="toc-list">
+        <a href="#section1" class="toc-item">一、总体要求</a>
+        <a href="#section2" class="toc-item">二、加快能源应用场景赋能</a>
+        <a href="#section3" class="toc-item">三、加大关键技术供给</a>
+        <a href="#section4" class="toc-item">四、保障措施</a>
+    </div>
+</div>
+
+<div class="content-wrapper">
+    <div class="section-title" id="section1">一、总体要求</div>
+    
+    <div class="content">
+        为深入贯彻党中央、国务院关于发展人工智能的战略部署，落实《新一代人工智能发展规划》要求，推进人工智能与能源领域深度融合，赋能能源高质量发展，制定本实施意见。
+    </div>
+
+    <div class="content">
+        坚持以习近平新时代中国特色社会主义思想为指导，全面贯彻党的二十大和二十届二中全会精神，完整、准确、全面贯彻新发展理念，服务构建新发展格局，统筹发展和安全，以数字化转型驱动能源生产和消费革命，加快推动人工智能技术在能源领域的创新应用，赋能能源安全保障、清洁低碳转型、生产运营高效化，为实现碳达峰碳中和目标、建设能源强国提供有力支撑。
+    </div>
+
+    <div class="content">
+        到2027年，能源领域人工智能技术创新能力显著增强，形成一批具有国际竞争力的原创技术和应用解决方案，人工智能成为能源高质量发展重要驱动力，能源系统智能化水平全面提升，有力支撑能源强国建设。
+    </div>
+
+    <div class="content">
+        到2030年，能源领域人工智能技术创新能力显著增强，形成一批具有国际竞争力的原创技术和应用解决方案，人工智能成为能源高质量发展重要驱动力，能源系统智能化水平全面提升，有力支撑能源强国建设。
+    </div>
+
+    <div class="section-title" id="section2">二、加快能源应用场景赋能</div>
+
+    <div class="subsection-title">（一）人工智能+电网。</div>
+    <div class="content">
+        围绕新型电力系统下的电网安全、新能源消纳、运行效率等要求，开展电力供需预测、电网智能诊断分析、规划方案智能生成等电网规划设计应用，加强电网工程智慧建设管理；推进电网多尺度智能仿真分析，探索人工智能模型在电网智能辅助决策和调度控制方面的应用，提升电力系统源网荷储全要素安全可靠低碳运行水平；稳步提高输变电等关键装备研制智能化水平；推动电力设备故障预测性维护，打造具备自主感知、决策、执行能力的电力设备健康管理智能体，提升设备精益化管理水平；推动营配调智能一体化应用，构建电网运营服务智能支撑体系，提升电力客户全过程智能服务水平；促进人工智能技术融入电力应急体系和能力建设，提升电力系统防灾减灾救灾智能化水平。
+    </div>
+
+    <div class="column-title">专栏1 人工智能+电网典型应用场景</div>
+    <div class="column-content">
+        电网智能规划设计与生产建设。构建电力供需智能预测、电网运行智能诊断分析、电网规划智能辅助决策、输变电设施智能设计等应用，应用人工智能技术开展规划设计和技术经济分析，推动电网规划设计作业模式向智能化转变。聚焦建设阶段的作业感知与业务监测，构建电网建设的人工智能违章识别、进度仿真、在线监测、管控指标实时分析、作业流程智能管理等应用，促进电网工程建造智能升级。
+    </div>
+    <div class="column-content">
+        电网调度运行。在全国统一电力市场建设背景下，构建新能源功率预测、负荷预测、离线仿真分析、在线安全分析、极端应急处置、调度辅助决策、市场出清运筹优化、电力市场智慧决策等方面的智能化应用，持续完善新一代智能调控技术支持体系，支撑新型电力系统安全稳定运行。
+    </div>
+    <div class="column-content">
+        电力设备状态评价与智能运维。构建设备状态智能感知与预警、设备故障智能定位与诊断、设备状态检修智能决策、设备灾害风险智能预测、检修工作票智能生成等应用，提升设备精益化管理水平。
+    </div>
+    <div class="column-content">
+        配电网智能运行管理。构建配电网实时感知、风险分析、智能决策等技术应用，全面提升配电网智慧控制能力和供电可靠性，加强配电网层面源网荷储协同调控。
+    </div>
+    <div class="column-content">
+        电力应急抢修。构建电力系统灾害风险智能预警、损毁情况智能分析、应急方案智能决策等辅助决策系统，推进电力应急抢修技术装备智能化应用，提升电力系统防灾减灾救灾能力。
+    </div>
+
+    <div class="subsection-title">（二）人工智能+能源新业态。</div>
+    <div class="content">
+        围绕能源保供和绿色低碳转型需求，推进人工智能技术在虚拟电厂（含负荷聚合商）、分布式储能、电动汽车车网互动等灵活性调节资源中的应用，提升负荷侧群控优化和动态响应能力；加强人工智能技术在新型储能与电力系统协同优化调度以及全生命周期安全中的应用，推动可再生能源制氢生产工艺智能寻优。强化人工智能技术赋能能源生产过程中的节能和碳排放管理，提升多能互补综合能源系统电、热、冷、气联供的综合能效和降碳水平。推动人工智能在零碳园区、智能微电网、算电协同中的应用，提升源网荷储一体化智能运行水平，促进新能源就地消纳。
+    </div>
+
+    <div class="column-title">专栏2 人工智能+能源新业态典型应用场景</div>
+    <div class="column-content">
+        虚拟电厂精准控制与智能运营。虚拟电厂运营商平台根据电网调节指令、市场信息，结合资源特性的动态变化，进行控制策略的智能优化和控制指令的智能生成，实现大规模灵活性资源聚合优化调控、实现虚拟电厂参与电力市场的智慧交易决策。
+    </div>
+    <div class="column-content">
+        绿氢生产工艺智能寻优。融合风光功率波动预测、储氢罐容量、电解槽温度、催化剂状态等多维数据，基于人工智能算法，智能驱动电解槽电流密度动态寻优，构建电解制氢-储氢-用氢全链条智能调控系统，实现可再生能源功率波动与电解装置柔性负荷的毫秒级匹配。
+    </div>
+    <div class="column-content">
+        园区智能降碳。基于光伏、储能等设备运行数据，园区智能降碳协同控制系统实时动态优化能源调度策略，结合电价与碳排放因子自动调节空调温度、充电桩功率及设备启停时序，通过增强现实可视化界面和语音助手向用户推送个性化节能建议，形成“碳-能-费”智能协同模式。
+    </div>
+    <div class="column-content">
+        新型储能智能化运行。针对新型储能动态适配电力系统调度、广域协同互动、弱电网支撑、电池装备安全监测、设备本体评估与运维，通过人工智能技术，提升面向弱电网的多类型储能协调控制能力，构建新能源与配建新型储能广域协同优化控制、储能电站智能评估、智慧运维决策支持、全生命周期安全等应用体系，提升系统友好型新能源电站的电力供应保障能力。
+    </div>
+    <div class="column-content">
+        智能营销服务。针对油、气、电等直接面向客户服务场景，构建座席业务受理智能辅助、智能客户服务、供电方案智能生成、综合用能方案智能生成、运维工单智能派发、用户用能异常诊断等智能化应用，打造交互式、伴随式的客服新模式，提升客户全过程智能化服务水平。
+    </div>
+
+    <div class="subsection-title">（三）人工智能+新能源。</div>
+    <div class="content">
+        针对新能源出力波动性与间歇性的问题，加快在高精度功率预测、电力市场、场站智慧运营、新能源规划、项目后评价等方向的人工智能应用，持续推动新能源关键材料及产品不断迭代和创新，推动复杂场景及转折性天气下功率预测大模型在更小尺度、更高精准度方向发展，支撑广域新能源资源协同优化，促进偏远地区新能源场站智能运维发展，打造“气象预测+功率预测+智慧交易+智能运维”一体化新能源智能生产模式，全力支撑新能源稳定供给。
+    </div>
+
+    <div class="column-title">专栏3 人工智能+新能源典型应用场景</div>
+    <div class="column-content">
+        气象预报与新能源功率精准预测。构建以多时空尺度气象预报为核心的气象服务体系，建立气象-功率非线性关系精准挖掘与解析的多场景多周期算法大模型，实现新能源功率精准预测。
+    </div>
+    <div class="column-content">
+        偏远地区场站智能运维。利用大模型、声纹检测、遥感、机器人、智能穿戴设备等技术装备，实时监测周边环境及设备运行状态，实现无人机、无人车、无人船、智能控制等多系统智能联动，提升设备巡检效率，提高场站的综合运营效率。
+    </div>
+    <div class="column-content">
+        新能源规划设计。综合考虑发电效率、投资回报率等因素，构建智能化推荐引擎，提供最优机型匹配方案。融合大模型与设计软件，快速生成多版本设计方案并评估关键参数，提升设计效率与质量。
+    </div>
+    <div class="column-content">
+        智慧工地建设。推动人工智能技术深度融入工程建设方案选择、人员管理、风险预警、工期管控等电力建设工程管理全流程，研发无人机巡检系统、风险自动研判预警系统等，实时捕捉施工人员violation行为，构建贯穿施工全过程的"智慧工地"管理平台，助力提升电力建设工程安全质量总体水平。
+    </div>
+
+    <div class="subsection-title">（四）人工智能+水电。</div>
+    <div class="content">
+        聚焦高海拔高寒地区水电工程智能化建设与流域水电站群智慧调度运营，推进人工智能技术在水电工程建设中的应用，提升水电工程智能化设计施工管理水平；推进人工智能技术与传统水文模型、气象模型、大规模水库调度技术融合，提升气象、水文双向耦合预测精度，开展调度决策优化智能应用建设；推动知识图谱、大模型、智能体等技术融入新一代水电智慧运营大脑，在水电站智慧运维与精益检修、智能大坝态势感知与智慧管理重点关注领域形成智能化解决方案。
+    </div>
+
+    <div class="column-title">专栏4 人工智能+水电典型应用场景</div>
+    <div class="column-content">
+        智能水电工程建设。基于多源遥感数据融合和智能机器人等人工智能技术，建立水电工程地质智能化勘测设计体系，实现机组设备数字化智能化安装调试，提升水电工程智能化施工管理水平。
+    </div>
+    <div class="column-content">
+        气象水文联合预测。基于流域气象水文双向耦合预测大模型，构建洪旱极端事件风险量化工具，充分融合气象知识、水文知识和流域地理信息，提升气象水文预报精度和预见期。
+    </div>
+<div class="column-content">
+    流域综合调度。基于流域站群联合智慧优化调度、风险控制和模拟仿真等关键技术，建设精准调度决策优化智能应用，实现对水资源调度方案执行情况的实时监测、分析和评估，在时间和空间上对水资源分配进行优化，提高水能利用率，增加发电效益。
+</div>
+<div class="column-content">
+    设备智能运检。基于物理场、声学、视觉、智能传感器等多源数据以及知识图谱、大模型等技术，推动水电关键设备实现状态全息监测、全生命周期健康管理、智能运维和状态检修等业务领域全流程智能化升级，实现运维知识结构化管理与基于大模型-智能体的智能辅助决策系统。
+</div>
+<div class="column-content">
+    大坝高质量运行。构建大坝典型病害特征数据库与知识图谱，结合大坝智能感知-融合-诊断-防控理论方法，实现多元驱动的大坝安全状态早期识别-自诊断-自适应预警-智能馈控，确保水电站大坝运行安全，支撑水库大坝高质量运行管理。
+</div>
+
+<div class="subsection-title">（五）人工智能+火电。</div>
+<div class="content">
+    围绕火电清洁降碳、安全可靠、高效调节、智能运行的发展方向，在燃料管控、生产运行优化与智能控制、设备全生命周期管理等业务场景，协同开展人工智能赋能及创新技术。加快火电数字化设计建造和智能化升级，推动火电运行控制系统智能化发展应用，提升火电关键装备全生命周期智能监测及健康管理能力，助力火电支撑保障能力进一步提升。
+</div>
+
+<div class="column-title">专栏5 人工智能+火电典型应用场景</div>
+<div class="column-content">
+    燃料智能管控。基于燃料市场价格波动、库存量、耗煤量以及煤堆三维结构、煤质分析等多维度多类型数据，采用先进传感、图像识别、规则理解以及智能体等技术，实现燃料数量、质量等智能检测和智能管控。
+</div>
+<div class="column-content">
+    生产运行优化。基于大模型和生产运营相关系统数据，实现生产运营过程中燃料掺配、运行优化、智能灵活调峰、安全智能管控等核心业务场景智能化升级，提升生产运营的智能化水平和效率。
+</div>
+<div class="column-content">
+    设备全生命周期管理。基于大模型和机器人等人工智能技术，通过对汽轮机（含燃气轮机）、发电机、锅炉受热面等关键设备多类型数据进行实时状态监测，实现设备状态全景监测、健康量化评估、隐患识别与故障预警、剩余寿命预测、运行方案调整、异常分析判断和隐患闭环管理。
+</div>
+<div class="column-content">
+    智能技术监督及评价。依托锅炉、汽轮机（含燃气轮机）、发电机等关键设备的海量运行数据与火电技术监督工作相关资料，基于火电大模型多模态分析能力，深度融合火电特色场景，提升技术监督的智能化和人员专业能力。
+</div>
+
+<div class="subsection-title">（六）人工智能+核电。</div>
+<div class="content">
+    围绕核电安全发展，构建核电安全预警、电站运行事件智能溯源分析、应急响应的智能辅助支持系统，开展核工业特种运维机器人技术攻关，持续推动核电系统的自动启停等技术升级演进，探索人工智能技术助力离子体预测控制、可控核聚变等技术路径，推动核电行业向数据驱动、模型牵引、智能管控的新模式稳步转型。
+</div>
+
+<div class="column-title">专栏6 人工智能+核电典型应用场景</div>
+<div class="column-content">
+    核电智能安全管控。借助数据治理及人工智能技术，聚焦运行事件溯源、技术规格书及运行参数边界条件，智能识别人员、设备、环境的不安全状态，推进安全预警、智能应急响应等场景技术攻关与应用。
+</div>
+<div class="column-content">
+    核电智能运维。利用各阶段的构筑物、系统及设备/部件的数据，建立数据驱动的核电厂模型，推动核电人工智能小模型及专业大模型研发，推进人工智能技术在核电系统智能监测、预警、诊断和预测中的应用，提升机组性能智能诊断和优化能力，提升关键设备、系统及机组的一键启停等能力，拓展高放射性、水下及密闭空间等高危场景机器人作业的范围与深度。
+</div>
+<div class="column-content">
+    可控核聚变智能控制。结合可控核聚变装置多物理场耦合特征，基于人工智能技术开展可控核聚变智能控制系统研究，研发等离子体位形实时预测-磁约束参数自适应调控智能模型，实现托卡马克等离子体稳态运行的智能化控制。
+</div>
+
+<div class="subsection-title">（七）人工智能+煤炭。</div>
+<div class="content">
+    聚焦地质勘探、煤矿采掘（剥）、煤炭洗选、生产调度、安全管控、设备管理等典型场景，稳定获取复杂地质、多工况以及多时空协同条件下的各种工况数据，融合应用智能模型，实现生产过程智能控制与自主决策，助力少人无人化作业常态化运行，稳步推进减人、增安、提效，进一步夯实煤炭在能源安全中的兜底保障作用。
+</div>
+
+<div class="column-title">专栏7 人工智能+煤炭典型应用场景</div>
+<div class="column-content">
+    煤矿地质勘探数智赋能。基于煤矿专业大模型，融合地面高精度勘探与井下动态智能探测的新技术，构建复杂地质条件下的煤矿地质数据库，实现矿井地质信息的全过程动态协同管理和预警，保障矿井高效、快速、绿色、智能生产。
+</div>
+<div class="column-content">
+    井工煤矿采掘工艺优化与智能控制。通过多模态感知、大小模型融合、设备群协同控制和工艺动态优化，挖掘煤岩特征信息，驱动采煤与掘进工作面设备群智能截割、自主决策与协同控制，实现采煤工作面生产系统自主运行、掘进工作面探-掘-支-锚-运高效协同以及少人无人化常态化作业，大幅提升采掘效率和安全水平。
+</div>
+<div class="column-content">
+    露天煤矿自主采装与运输无人化。推进大模型模拟爆破参数与穿爆作业的融合，应用人工智能技术快速解析采剥进度，实现采-运-排生产系统内挖掘机、排土推土机以及其他辅助作业设备常态化远控或自主作业，以及矿用卡车无人驾驶规模化运行，提升穿爆智能化程度和精准度，大幅减少坑下作业人员数量，提升露天煤矿生产效率与安全水平。
+</div>
+<div class="column-content">
+    煤炭质量快速检测与智能洗选。采集与构建煤质特征数据库，实时动态预测煤炭灰分、硫分、挥发分、水分及元素含量等关键指标，实现煤质特征智能识别，大幅提高煤质在线检测精度，实时反馈煤质在线检测数据，优化调节选煤生产工艺参数，提高煤炭产品质量合格率与稳定率。开发煤炭洗选专业模型，建立工业数字孪生体，实现煤炭洗选全过程的信息动态监测、趋势预测及协同管理。
+</div>
+<div class="column-content">
+    煤矿重大设备状态监测和智能运维。建立重大设备实时运行状态和润滑、温震等检测数据融合大模型，实现故障诊断和智能预警，推动煤矿设备预防性检修，大幅降低故障影响生产时间，有效降低维护成本。
+</div>
+
+<div class="subsection-title">（八）人工智能+油气。</div>
+<div class="content">
+    聚焦跨专业协同研究、现场作业操控、生产运行管控等方向，推动勘探地质目标智能评价、开发方案智能优化、钻井压裂等作业参数智能调整、炼化装置智能运行、管网运行实时仿真，加快智能钻机、机器人、无人机、智能感知系统等智能生产技术装备的研发与应用，推动生产现场等全过程智能联动与自动优化，推动油气产业链智能化升级建设。
+</div>
+
+<div class="column-title">专栏8 人工智能+油气典型应用场景</div>
+<div class="column-content">
+    油气勘探智能赋能。提升面向地震、测井、岩心露头等勘探专业领域的软件智能化水平，构建面向地震测井处理解释的专业大模型，打造面向有利地质目标综合评价的智能应用系统，实现可控震源智能辅助驾驶、地震检波器埋置等机器人示范应用。
+</div>
+<div class="column-content">
+    油气藏开发与生产智能管控。研发油气开发数据与知识智能化技术、智能开发优化软件和专业大模型，打造大模型驱动的协同研究与生产管理决策平台，构建面向智慧油气田开发生产管控的新模式。
+</div>
+<div class="column-content">
+    海洋油气生产环境预测维护。聚焦海洋油气生产过程环境保护和重大风险防范、治理等需求，通过生产环境智能监测与异常预警、固废处理智能管控、溢油智能识别与应急预测等手段，形成覆盖油气田全域生态环境状况的风险预知、态势感知、事故早知和认知决策一体化能力。
+</div>
+<div class="column-content">
+    工程技术智能优化。推进地面工程智能设计、钻井参数智能优化、录井实时智能判层、储层改造及智能故障诊断与风险评估，实现井控机器人示范应用，保障复杂地质环境下施工安全高效。
+</div>
+<div class="column-content">
+    管网仿真及智能调控。推进市场洞察预测、管网实时仿真及动态优化、高效智能站库运行、空天地一体线路管理及关键设备监测预警，实现“黑屏”智能调控，提升油气管网安全生产、油气保供与公平服务能力。
+</div>
+<div class="column-content">
+    炼厂生产营运一体化优化。面向全流程计划优化、安全生产智能识别、设备预防性维修等环节，攻关新材料研发科学计算大模型，通过大小模型协同、混合建模等技术手段，减少工艺波动，降低安全事故发生概率，提升生产运营智能化水平。
+        </div>
+        
+        <div class="section-title" id="section3">三、加大关键技术供给</div>
+        <div class="content-no-indent">
+            聚焦能源领域数据孤岛化、算力碎片化、算法黑盒化、算力高耗能等技术瓶颈，推动开展适用能源领域的数据、算力、算法等共性关键技术攻关。
+        </div>
+
+<div class="subsection-title">（一）夯实数据基础。</div>
+<div class="content">
+    针对能源领域高质量数据集构建和数据安全需求，推动数据智能标注、智能增强、数据合成等技术应用，推进能源数据分类分级技术、隐私计算技术以及智能数据动态加密和跨域可信溯源等技术研发，优化数据分享机制，加快形成能源领域高质量数据集，确保能源数据全流程安全可靠。
+</div>
+
+<div class="subsection-title">（二）强化算力支撑。</div>
+<div class="content">
+    针对能源领域租建结合模式下的多元异构算力融合利用需求，开展多元异构算力统一调度、任务智能编排、存算网一体化融合、算力池化等关键技术攻关，提升智算服务水平。持续开展能源算力需求监测，统筹规划算力、电力和通信网络资源，构建算力、电力深度融合的算电协同发展机制，不断提高算力中心绿电比例。
+</div>
+
+<div class="subsection-title">（三）提升模型基础能力。</div>
+<div class="content">
+    针对能源领域对于模型安全性和可解释性的需求，推动模型算法、应用系统等安全能力建设，加大多智能体协同、可解释性、模型轻量化推理等技术的研究，持续深化机器视觉、多模态、时序预测等人工智能关键技术在能源领域的应用研究，推动人工智能与能源领域软件深度融合。针对人工智能计算耗能问题，加快突破人工智能绿色低碳技术瓶颈，研究柔性直流供电、模块化小型堆等能源供给技术，鼓励数据中心液冷技术、废热回收、备电集约化等高效能源综合利用技术的应用。
+</div>
+
+<div class="section-title" id="section4">四、保障措施</div>
+
+<div class="subsection-title">（一）强化组织实施。</div>
+<div class="content">
+    各地方能源主管部门和相关中央企业要根据意见要求，健全工作机制，统筹衔接好相关规划，结合实际加快推动本地区、本单位“人工智能+”能源的发展，做好各项要素保障，探索构建安全治理体系，形成上下联动、层层落实、安全发展的工作格局，加快推动人工智能在能源领域融合应用的技术研发、示范试验、推广应用等工作。
+</div>
+
+<div class="subsection-title">（二）推动协同创新。</div>
+<div class="content">
+    围绕能源领域人工智能融合创新应用关键共性技术和配套专用技术，推动建设一批行业研发创新平台。鼓励企业牵头联合科研机构、高校、社会服务机构等单位，建设以技术创新融合应用为目标的跨领域、跨学科的“人工智能+”能源创新联盟，深化产学研用合作，构建开放协同、共创共享的能源智能化创新生态体系。
+</div>
+
+<div class="subsection-title">（三）加强标准规范建设。</div>
+<div class="content">
+    在深入总结应用示范实践的基础上，加快编制能源数据治理、多元异构算力融合、典型场景设计等一批技术标准规范，推动能源领域人工智能标准体系建设，探索建立人工智能应用评估指标体系和行业级人工智能应用标准测试平台，提升能源领域人工智能技术安全应用水平。鼓励能源企业主导制定国际标准，以技术标准“走出去”带动人工智能技术和产品在海外能源市场推广应用。
+</div>
+
+<div class="subsection-title">（四）开展试点示范。</div>
+<div class="content">
+    组织开展能源领域人工智能应用试点示范，遴选一批可复制、易推广的场景和企业标杆应用。鼓励开展能源和交通融合、油气和新能源融合等跨领域、跨行业典型场景示范。能源领域人工智能应用相关技术装备优先纳入能源领域首台（套）重大技术装备支持范围。支持具备条件的地区和企业，因地制宜开展能源领域各类人工智能应用试点示范，在技术创新、商业模式、发展业态、体制机制等方面深入探索、先行先试。
+</div>
+
+<div class="subsection-title">（五）加大支持力度。</div>
+<div class="content">
+    充分发挥中央财政资金带动作用，依托能源领域、人工智能领域国家科技重大专项和重点研发计划等科技专项，有序推动能源领域人工智能技术应用创新。发挥多层次资本市场支持科技创新关键枢纽作用，引导社会资本参与人工智能科技项目实施和成果转化应用。
+</div>
+
+<div class="subsection-title">（六）完善人才培育生态。</div>
+<div class="content">
+    鼓励能源企业与高等院校、科研院所共建“人工智能+”能源人才培养基地，以行业需求为导向设计跨学科课程体系，重点培养具备能源系统知识、人工智能算法应用能力的复合型人才，通过产教协同增加复合型人才供给。
+</div>
+
+<div class="signature">
+    国家发展改革委 国家能源局
+</div>
+<div class="date">
+    2025年9月4日
+</div>
+
+</div>
+
+<!-- 页脚信息 -->
+<div style="margin-top: 40px; text-align: center; font-size: 16px; color: #666; padding: 25px; background: rgba(255, 255, 255, 0.8); border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);">
+    <p>🏛️ 国家发展改革委 国家能源局</p>
+    <p>📅 发布时间：2025年9月4日</p>
+</div>
+
+<!-- 返回顶部按钮 -->
+<button onclick="scrollToTop()" id="backToTop" style="position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; cursor: pointer; font-size: 20px; box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3); display: none; z-index: 1000; transition: all 0.3s ease;">↑</button>
+
+<script>
+    // 返回顶部功能
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+    
+    // 显示/隐藏返回顶部按钮
+    window.addEventListener('scroll', function() {
+        const backToTopBtn = document.getElementById('backToTop');
+        if (window.pageYOffset > 300) {
+            backToTopBtn.style.display = 'block';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+    
+    // 页面加载动画
+    document.addEventListener('DOMContentLoaded', function() {
+        const contentWrapper = document.querySelector('.content-wrapper');
+        const toc = document.querySelector('.toc');
+        const header = document.querySelector('.header');
+        
+        header.style.opacity = '0';
+        header.style.transform = 'translateY(-30px)';
+        
+        toc.style.opacity = '0';
+        toc.style.transform = 'translateY(30px)';
+        
+        contentWrapper.style.opacity = '0';
+        contentWrapper.style.transform = 'translateY(30px)';
+        
+        setTimeout(() => {
+            header.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            header.style.opacity = '1';
+            header.style.transform = 'translateY(0)';
+        }, 100);
+        
+        setTimeout(() => {
+            toc.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            toc.style.opacity = '1';
+            toc.style.transform = 'translateY(0)';
+        }, 300);
+        
+        setTimeout(() => {
+            contentWrapper.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            contentWrapper.style.opacity = '1';
+            contentWrapper.style.transform = 'translateY(0)';
+        }, 500);
+    });
+    
+    // 平滑滚动到锚点
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // 添加内容区域容器包装（如果不存在）
+    const contentElements = document.querySelectorAll('.content, .content-no-indent, .column-content');
+    const existingWrapper = document.querySelector('.content-wrapper');
+    
+    if (contentElements.length > 0 && !existingWrapper) {
+        const container = document.createElement('div');
+        container.className = 'content-wrapper';
+        container.style.background = 'rgba(255, 255, 255, 0.95)';
+        container.style.padding = '40px';
+        container.style.borderRadius = '20px';
+        container.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.08)';
+        container.style.backdropFilter = 'blur(10px)';
+        container.style.marginBottom = '30px';
+        
+        const firstContent = contentElements[0];
+        const parent = firstContent.parentNode;
+        
+        parent.insertBefore(container, firstContent);
+        
+        contentElements.forEach(element => {
+            container.appendChild(element);
+        });
+    }
+</script>
+</body>
+</html>
