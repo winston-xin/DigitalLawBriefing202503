@@ -1,0 +1,36 @@
+# GitHub Pages Configuration
+title: "数字政策与法规简报 - 2025年第3期"
+description: "辽宁省律师协会数字法治与数字经济专业委员会发布的数字政策与法规简报"
+baseurl: "/DigitalLawBriefing202503"
+url: "https://[username].github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - .gitignore
+  - .github/
+  - .vscode/
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+
+# Include specific files
+include:
+  - .nojekyll
+
+# Encoding
+encoding: utf-8
+
+# Safe mode for GitHub Pages
+safe: true
+
+# Base URL settings
+# This helps with proper asset loading when deployed to GitHub Pages subdirectory
